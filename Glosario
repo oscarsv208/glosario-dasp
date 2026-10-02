@@ -1,0 +1,39 @@
+GLOSARIO
+Dato VS Información
+Dato: Es un trozo de información mínima, aislada y sin procesar sobre algún concepto o hecho. Por sí solo no aporta un significado contextual.
+Información: Es el resultado de procesar, estructurar y dar contexto a un conjunto de datos para que adquieran un significado útil para la toma de decisiones.
+Sistema de información basado en archivos (y sus desventajas)
+Definición: Corresponde a la generación cero de almacenamiento donde los datos se guardan en ficheros o archivos independientes gestionados directamente por el sistema operativo y manipulados por programas de aplicación específicos.
+Desventajas principales:
+Redundancia e inconsistencia de datos: Los mismos datos pueden estar duplicados en varios ficheros, lo que puede provocar que una actualización en uno no se refleje en otro, generando datos contradictorios.
+Dificultad en el acceso a los datos: Las consultas imprevistas son difíciles de realizar sin escribir un programa nuevo y específico para ello.
+Problemas de seguridad: Es más complejo restringir el acceso a partes específicas de los ficheros para determinados usuarios.
+Aislamiento de los datos: Los datos están dispersos en formatos diferentes, lo que dificulta su unificación.
+Fichero o Archivo
+Definición: Estructura de información creada por los sistemas operativos en los dispositivos de almacenamiento (discos duros, pen drives, etc.) para organizar y retener datos. Suelen tener un nombre y una extensión que determina su formato y la forma en que debe interpretarse.
+Ficheros secuenciales
+Definición: Organización de ficheros en la que los datos están dispuestos de forma consecutiva, unos detrás de otros. Para acceder a un dato en concreto, es obligatorio recorrer y leer todos los datos anteriores que lo preceden.
+Ficheros de acceso directo
+Definición: Organización de ficheros que permite acceder a un dato específico de manera directa y rápida, calculando su posición física o lógica en el dispositivo sin necesidad de recorrer los datos anteriores.
+Ficheros indexados
+Definición: Organización de ficheros que utiliza una estructura auxiliar llamada índice (similar al índice de un libro). El índice relaciona el valor de la clave con la posición exacta del registro, permitiendo un acceso rápido a la información.
+Sistema de Gestión de Bases de Datos (SGBD / DBMS)
+Definición: Conjunto de herramientas de software que facilitan la creación, consulta, uso y actualización de una base de datos, ocultando la complejidad física del almacenamiento.
+Ventajas: Garantizan la integridad, seguridad, control de concurrencia (múltiples usuarios), uso de transacciones y ofrecen independencia de los datos respecto a las aplicaciones.
+Desventajas: Su coste de adquisición y mantenimiento puede ser elevado, requieren personal especializado (administradores de bases de datos o DBA) y tienen una mayor complejidad de instalación y gestión en comparación con los ficheros simples.
+Base de datos
+Definición: Colección de información estructurada y relacionada perteneciente a un mismo contexto o problema, organizada mediante tablas (formadas por filas o registros y columnas o campos) que se vinculan entre sí para evitar contradicciones.
+Modelos de bases de datos
+Modelo jerárquico: Organiza la información en una estructura de árboles (con relaciones de parentesco padre-hijo, donde un hijo solo puede tener un padre). Fue muy popular en los sistemas de discos magnéticos de los años 60.
+Modelo en red: Evolución del jerárquico que permite que un nodo hijo tenga múltiples padres, formando estructuras de grafos y listas enlazadas (estándar CODASYL).
+Modelo relacional: Basado en la teoría de conjuntos y la lógica de predicados (propuesto por Edgar F. Codd en 1970). Los datos se organizan en tablas bidimensionales (relaciones) relacionadas mediante claves. Es el modelo más utilizado actualmente.
+Modelo orientado a objetos: Almacena colecciones de objetos persistentes que contienen tanto la información (atributos) como los comportamientos o métodos sobre cómo procesar dichos datos.
+Modelo NoSQL (Nota complementaria): Modelos de bases de datos no relacionales diseñados para almacenar grandes volúmenes de datos distribuidos que no requieren esquemas rígidos en forma de tablas (por ejemplo, orientados a documentos, clave-valor, etc.).
+Bases de datos centralizadas VS Bases de datos distribuidas
+Bases de datos centralizadas: Toda la información y el motor del SGBD residen y se procesan en un único ordenador o servidor central.
+Bases de datos distribuidas: Consisten en múltiples ordenadores o nodos interconectados a través de una red, donde la base de datos se encuentra repartida entre ellos, compartiendo y sincronizando la información de forma transparente para el usuario.
+Fragmentación de bases de datos
+Definición: Técnica utilizada en bases de datos distribuidas que consiste en dividir una tabla o base de datos en partes más pequeñas (fragmentos) para distribuirlas en diferentes nodos según las necesidades de acceso.
+Fragmentación horizontal: Consiste en dividir una tabla seleccionando filas (registros) específicos según una condición (por ejemplo, clientes de la región Norte en un nodo y de la región Sur en otro).
+Fragmentación vertical: Consiste en dividir una tabla seleccionando columnas (campos) específicas (por ejemplo, separar los datos personales de los datos de facturación de un empleado).
+Fragmentación mixta: Es la combinación de ambas técnicas; se divide la tabla tanto en filas como en columnas simultáneamente.
